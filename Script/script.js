@@ -32,30 +32,51 @@ selectNation.innerHTML = innerNation
 
 
 const form = document.forms.form
+const firstname = form.elements.firstname;
+const lastname = form.elements.lastname;
+const nationality = form.elements.nationality;
+const email = form.elements.email;
+const datebirth = form.elements.datebirth;
+const monthbirth = form.elements.monthbirth;
+const yearbirth = form.elements.yearbirth;
+const radio = form.elements.radio;
+const password = form.elements.password;
+const confirmpassword = form.elements.confirmpassword;
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const firstname = form.elements.firstname.value;
-    const lastname = form.elements.lastname.value;
-    const nationality = form.elements.nationality.value;
-    const email = form.elements.email.value;
-    const datebirth = form.elements.datebirth.value;
-    const monthbirth = form.elements.monthbirth.value;
-    const yearbirth = form.elements.yearbirth.value;
-    const radio = form.elements.radio.value;
-    const pass = form.elements.password.value;
-    const confirmpassword = form.elements.confirmpassword.value;
+   
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+    if(email.value.match(pattern))
+    {}
+    else{
+    document.querySelector('#email_box').style.borderBottom ='1px solid #FF2828';
+    email.style.color= '#FF2828';
+    document.querySelector('.email_error').style.display='block';
+    }
 
-   if (pass !== confirmpassword) {
-    document.querySelector('.pass_error').style.display='block'; 
+    
+
+   if (password.value !== confirmpassword.value) {
+    document.querySelector('.pass_error').style.display='block';
+    document.querySelector('#submit_btn').style.animation='effect 0.2s';
+    
    }
    else{
-    console.log([`FirstName: ${firstname}`,`LastName:${lastname}`,`Natonality:${nationality}`,
-    `Email:${email}`,`DateBirth:${datebirth}`,`MonthBirth:${monthbirth}`,`YearhBirth:${yearbirth}`,
-    `Gender:${radio}`,`Password:${pass}`]);
+    console.log([`FirstName: ${firstname.value}`,`LastName:${lastname.value}`,`Natonality:${nationality.value}`,
+    `Email:${email.value}`,`DateBirth:${datebirth.value}`,`MonthBirth:${monthbirth.value}`,`YearhBirth:${yearbirth.value}`,
+    `Gender:${radio.value}`,`Password:${password.value}`]);
    }
    document.querySelector('.pass_error-btn').addEventListener('click', (e) =>{
-   document.querySelector('.pass_error').style.display='none';  
+   document.querySelector('.pass_error').style.display='none'; 
+   document.querySelector('#submit_btn').style.animation='none'; 
 })
+    document.querySelector('.email_error-btn').addEventListener('click', (e) =>{
+    document.querySelector('.email_error').style.display='none';
+    document.querySelector('#email_box').style.borderBottom ='1px solid #F2F2F2';
+    email.style.color= '#111111'; 
+ })
  
 }
 )

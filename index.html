@@ -44,9 +44,9 @@
                         <label for="nationality" class="label_user">Nationality</label>
                         <select class="user_input" name="nationality" id="nationality"></select>
                     </div>
-                    <div class="main_form-part">
+                    <div class="main_form-part" id="email_box">
                         <label for="email" class="label_user">E-mail</label>
-                        <input type="email" class="user_input" name="email" id="email" value="alice.miller@yahoo.com"
+                        <input type="text" class="user_input" name="email" id="email" value="alice.miller@yahoo.com"
                             required>
                     </div>
                     <div class="main_form-part">
@@ -84,7 +84,7 @@
                         <input type="password" class="input_password" name="confirmpassword" id="confirmpassword" minlength="8" required>
                     </div>
 
-                    <button type="submit" name="button" class="inp_btn inp_btn-shake" id="submit_btn">Complete Signup</button>
+                    <button type="submit" name="button" class="inp_btn" id="submit_btn">Complete Signup</button>
                 </form>
             </div>
             <div class="login-link">
@@ -94,7 +94,11 @@
         </div>
         <div class="pass_error" style="display: none ;" >
             ENTER THE CORRECT CONFIRMATION PASSWORD!
-            <div class="pass_error-btn">OK</div>
+        <div class="pass_error-btn">OK</div>
+        </div>
+        <div class="email_error" style="display: none ;" >
+            CHECK THE CORRECT INPUT EMAIL!
+        <div class="email_error-btn">OK</div>
         </div>
     </div>
 
