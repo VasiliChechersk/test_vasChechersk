@@ -31,7 +31,7 @@
             <div class="form">
                 <h2>New user?</h2>
                 <p>Use the form below to create your account.</p>
-                <form class="main_form">
+                <form class="main_form" name="form" tabindex="1">
                     <div class="main_form-part">
                         <label for="firstname" class="label_user">First Name</label>
                         <input type="text" class="user_input" name="firstname" id="firstname" value="Alice" required>
@@ -53,8 +53,8 @@
                         <p class="label_user">Date of Birth</p>
                         <div class="selectdate">
                             <select class="date_input" name="datebirth" id="date"></select>
-                            <select class="date_input" name="datebirth" id="month"></select>
-                            <select class="date_input" name="datebirth" id="year"></select>
+                            <select class="date_input" name="monthbirth" id="month"></select>
+                            <select class="date_input" name="yearbirth" id="year"></select>
                         </div>
                     </div>
                     <div class="main_form-part">
@@ -62,12 +62,12 @@
                         <div class="gender">
 
                             <div class="gender_box gender_box-male">
-                                <input id="male" type="radio" name="radio" class="gender_input">
+                                <input id="male" type="radio" name="radio" class="gender_input" value="male">
                                 <label for="male" class="label_radio">Male</label>
                             </div>
 
                             <div class="gender_box gender_box-female">
-                                <input id="female" type="radio" name="radio" class="gender_input" checked>
+                                <input id="female" type="radio" name="radio" class="gender_input" value="female" checked>
                                 <label for="female" class="label_radio">Female</label>
                             </div>
 
@@ -76,7 +76,8 @@
 
                     <div class="main_form-part">
                         <label for="inputpassword" class="label_user">Password</label>
-                        <input type="password" class="input_password" name="password" id="inputpassword" minlength="8" required >
+                        <input type="password" class="input_password" name="password" id="inputpassword" pattern=(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,} 
+                        title="Пароль должен быть не короче 8 символов и содержать строчную и заглавную буквы латинского алфавита и цифру" required >
                     </div>
                     <div class="main_form-part">
                         <label for="inputpassword" class="label_user">Confirm Password</label>
@@ -89,6 +90,11 @@
             <div class="login-link">
                 Have an account?<a href="#">Login</a>
             </div>
+            
+        </div>
+        <div class="pass_error" style="display: none ;" >
+            ENTER THE CORRECT CONFIRMATION PASSWORD!
+            <div class="pass_error-btn">OK</div>
         </div>
     </div>
 
