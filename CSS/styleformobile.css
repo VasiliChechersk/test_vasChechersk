@@ -73,7 +73,9 @@
     
     .inp_btn {
         right: 3%;
-        bottom: -13.5%;  
+        bottom: -13.5%; 
+        height: 32px;
+        width: 50%; 
     }
     
     
@@ -99,4 +101,15 @@
         
     }
     
+}
+
+.login-link {
+   
+    width: 50%;
+    height: 15px;
+    font-size: 14px;
+    line-height: 14px;
+    left: 0px;
+    bottom: 20px;
+    text-align: center;
 }
