@@ -74,14 +74,13 @@
                         </div>
                     </div>
 
-                    <div class="main_form-part">
+                    <div class="main_form-part" id="inputpassword_box">
                         <label for="inputpassword" class="label_user">Password</label>
-                        <input type="password" class="input_password" name="password" id="inputpassword" pattern=(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,} 
-                        title="Пароль должен быть не короче 8 символов и содержать строчную и заглавную буквы латинского алфавита и цифру" required >
+                        <input type="password" class="input_password" name="password" id="inputpassword" required >
                     </div>
-                    <div class="main_form-part">
+                    <div class="main_form-part" id="confirmpassword_box">
                         <label for="inputpassword" class="label_user">Confirm Password</label>
-                        <input type="password" class="input_password" name="confirmpassword" id="confirmpassword" minlength="8" required>
+                        <input type="password" class="input_password" name="confirmpassword" id="confirmpassword" required>
                     </div>
 
                     <button type="submit" name="button" class="inp_btn" id="submit_btn">Complete Signup</button>
@@ -92,13 +91,14 @@
             </div>
             
         </div>
-        <div class="pass_error" style="display: none ;" >
-            ENTER THE CORRECT CONFIRMATION PASSWORD!
-        <div class="pass_error-btn">OK</div>
+        <div class="pass_error pass_error-input" style="display: none ;" >
+            The password must be at least 8 characters long and contain lowercase and uppercase Latin alphabet digits!
+        </div>
+        <div class="pass_error pass_error-confirm" style="display: none ;" >
+            Enter the correct confirmation password!
         </div>
         <div class="email_error" style="display: none ;" >
-            CHECK THE CORRECT INPUT EMAIL!
-        <div class="email_error-btn">OK</div>
+            Check the correct input email!
         </div>
     </div>
 

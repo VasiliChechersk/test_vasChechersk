@@ -43,40 +43,61 @@ const radio = form.elements.radio;
 const password = form.elements.password;
 const confirmpassword = form.elements.confirmpassword;
 
+email.addEventListener('change', (e) => {
+    const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+    if (!email.value.match(patternEmail)){
+        document.querySelector('#email_box').style.borderBottom = '1px solid #FF2828';
+        email.style.color = '#FF2828';
+        document.querySelector('.email_error').style.display = 'block';
+        document.querySelector('.inp_btn').type = 'button';
+    }else{
+        document.querySelector('.email_error').style.display = 'none';
+        document.querySelector('#email_box').style.borderBottom = '1px solid #F2F2F2';
+        email.style.color = '#111111';
+        document.querySelector('.inp_btn').type='submit';
+ 
+    }
+   
+})
+password.addEventListener('change', (e) => {
+    const patternPassword = /(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}/
+    if (!password.value.match(patternPassword)) { 
+       document.querySelector('#inputpassword_box').style.borderBottom = '1px solid #FF2828';
+        password.style.color = '#FF2828';
+        document.querySelector('.pass_error-input').style.display = 'block';
+        document.querySelector('.inp_btn').type = 'button'; 
+    }else{
+    
+    document.querySelector('.pass_error-input').style.display = 'none';
+    document.querySelector('#inputpassword_box').style.borderBottom = '1px solid #F2F2F2';
+    password.style.color = '#111111'; 
+    document.querySelector('.inp_btn').type='submit';
+    } 
+})
+
+confirmpassword.addEventListener('change', (e) => {
+    if (password.value !== confirmpassword.value) {
+      document.querySelector('#confirmpassword_box').style.borderBottom = '1px solid #FF2828';
+        confirmpassword.style.color = '#FF2828';
+        document.querySelector('.pass_error-confirm').style.display = 'block';
+        document.querySelector('.inp_btn').type = 'button';  
+     }
+    else {
+       document.querySelector('.pass_error-confirm').style.display = 'none';
+    document.querySelector('#confirmpassword_box').style.borderBottom = '1px solid #F2F2F2';
+    confirmpassword.style.color = '#111111';
+    document.querySelector('.inp_btn').type='submit'; 
+    }
+})
+
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-   
-    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
-    if(email.value.match(pattern))
-    {}
-    else{
-    document.querySelector('#email_box').style.borderBottom ='1px solid #FF2828';
-    email.style.color= '#FF2828';
-    document.querySelector('.email_error').style.display='block';
-    }
-
     
-
-   if (password.value !== confirmpassword.value) {
-    document.querySelector('.pass_error').style.display='block';
-    document.querySelector('#submit_btn').style.animation='effect 0.2s';
+        console.log([`FirstName: ${firstname.value}`, `LastName:${lastname.value}`, `Natonality:${nationality.value}`,
+        `Email:${email.value}`, `DateBirth:${datebirth.value}`, `MonthBirth:${monthbirth.value}`, `YearhBirth:${yearbirth.value}`,
+        `Gender:${radio.value}`, `Password:${password.value}`]);
     
-   }
-   else{
-    console.log([`FirstName: ${firstname.value}`,`LastName:${lastname.value}`,`Natonality:${nationality.value}`,
-    `Email:${email.value}`,`DateBirth:${datebirth.value}`,`MonthBirth:${monthbirth.value}`,`YearhBirth:${yearbirth.value}`,
-    `Gender:${radio.value}`,`Password:${password.value}`]);
-   }
-   document.querySelector('.pass_error-btn').addEventListener('click', (e) =>{
-   document.querySelector('.pass_error').style.display='none'; 
-   document.querySelector('#submit_btn').style.animation='none'; 
-})
-    document.querySelector('.email_error-btn').addEventListener('click', (e) =>{
-    document.querySelector('.email_error').style.display='none';
-    document.querySelector('#email_box').style.borderBottom ='1px solid #F2F2F2';
-    email.style.color= '#111111'; 
- })
- 
 }
 )

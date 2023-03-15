@@ -55,6 +55,21 @@ p {
     /* border: 1px solid green; */
     top: 62px;
 }
+.main_form>div {opacity: 0%;}
+.main_form>div:nth-child(1) {animation: ani 0.5s forwards 5s;}
+.main_form>div:nth-child(2) {animation: ani 0.5s forwards 5.5s;}
+.main_form>div:nth-child(3) {animation: ani 0.5s forwards 6s;}
+.main_form>div:nth-child(4) {animation: ani 0.5s forwards 6.5s;}
+.main_form>div:nth-child(5) {animation: ani 0.5s forwards 7s;}
+.main_form>div:nth-child(6) {animation: ani 0.5s forwards 7.5s;}
+.main_form>div:nth-child(7) {animation: ani 0.5s forwards 8s;}
+.main_form>div:nth-child(8) {animation: ani 0.5s forwards 8.5s;}
+
+@keyframes ani {
+  0% {opacity: 0%;}
+ 
+  100% {opacity: 100%;}
+}
 
 .main_form-part {
     position: relative;
@@ -205,43 +220,33 @@ object {
     0% {
         transform: translateX(0px);
     }
-
     10% {
         transform: translateX(-10px);
     }
-
     20% {
         transform: translateX(0px);
     }
-
     30% {
         transform: translateX(10px);
     }
-
     40% {
         transform: translateX(0px);
     }
-
     50% {
         transform: translateX(-6px);
     }
-
     60% {
         transform: translateX(0px);
     }
-
     70% {
         transform: translateX(6px);
     }
-
     80% {
         transform: translateX(0px);
     }
-
     90% {
         transform: translateX(-2px);
     }
-
     100% {
         transform: translateX(0px);
     }
@@ -249,39 +254,23 @@ object {
 
 .pass_error {
     width: 400px;
-    height:50px;
+    height:60px;
     border: 2px solid red;
     border-radius: 5px;
     background-color: rgb(248, 236, 238);
     position: absolute;
-    left: 30%;
-    top: 60%;
+    left: -10%;
+    top: 67%;
     text-align: center;
     color: brown;
     font-family: 'Work Sans', sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
-
-
-.pass_error-btn {
-    width: 25px;
-    height: 17px;
-    border: 1px solid red;
-    background-color: rgb(247, 181, 194);
-    position: absolute;
-    right: 1%;
-    top: 25%;
-    text-align: center;
-    color: brown;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+.pass_error-confirm{
+    left: 50%;
 }
 
-.pass_error-btn:hover{
-    cursor: pointer;
-}
 
 .email_error {
     width: 400px;
@@ -297,24 +286,4 @@ object {
     font-family: 'Work Sans', sans-serif;
     font-size: 17px;
     font-weight: 400;
-}
-
-
-.email_error-btn {
-    width: 25px;
-    height: 17px;
-    border: 1px solid red;
-    background-color: rgb(247, 181, 194);
-    position: absolute;
-    right: 1%;
-    top: 25%;
-    text-align: center;
-    color: brown;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.email_error-btn:hover{
-    cursor: pointer;
 }
