@@ -11,13 +11,9 @@ body {
     width: 665px;
     height: 481px;
     margin: 10% auto;
-    /* left: 68px;
-    top: 60px; */
-    /* background-color: cyan; */
+    
 }
   
-
-
 .login-link {
     position: absolute;
     width: auto;
@@ -26,11 +22,11 @@ body {
     font-size: 13px;
     line-height: 15px;
     color: #000000;
-    right: 360px;
-    bottom: 44px;
+    left: 23.76%;
+    top: calc(50% - 15px/2 + 189px);
 }
+
 a{
-    margin-left: 5px;
     color: #5A61ED;
 }
   

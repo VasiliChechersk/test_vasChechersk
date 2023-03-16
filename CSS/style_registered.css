@@ -1,0 +1,30 @@
+.registered_container {
+    position: relative;
+    width: 527.8px;
+    height: 480px;
+    background-color: #FFFFFF;
+
+}
+
+.registered_title {
+    position: absolute;
+    height: 26px;
+    right: 67.84%;
+    top: calc(50% - 26px/2 - 13.5px);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.46px;
+    color: #111111;
+}
+
+.registered_text {
+    position: absolute;
+    height: 16px;
+    right: 69.8%;
+    top: calc(50% - 16px/2 + 18.5px);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+}
