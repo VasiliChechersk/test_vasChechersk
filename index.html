@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/CSS/style_title.css">
     <link rel="stylesheet" href="/CSS/style_form.css">
     <link rel="stylesheet" href="/CSS/styleformobile.css">
+    <link rel="stylesheet" href="/CSS/style_registered.css">
     <title>Document</title>
 </head>
 
@@ -23,15 +24,15 @@
         <div class="title_container">
             <p class="title_text">Sign up</p>
         </div>
-        <div class="form_container">
+        <div class="form_container" style="display: block;">
             <!-- svg-icon -->
             <object id="Слой_1" type="image/svg+xml" data="/images/Shape-1.svg"></object>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
             <!-- svg-icon -->
             <div class="form">
-                <h2>New user?</h2>
-                <p>Use the form below to create your account.</p>
+                <h2 class="form_title">New user?</h2>
+                <p class="form_text">Use the form below to create your account.</p>
                 <form class="main_form" name="form" tabindex="1">
                     <div class="main_form-part">
                         <label for="firstname" class="label_user">First Name</label>
@@ -87,9 +88,7 @@
                     <button type="submit" name="button" class="inp_btn" id="submit_btn">Complete Signup</button>
                 </form>
             </div>
-            <div class="login-link">
-                Have an account?<a href="#">Login</a>
-            </div>
+           
             
         </div>
         <div class="pass_error pass_error-input" style="display: none ;" >
@@ -101,6 +100,13 @@
         <div class="email_error" style="display: none ;" >
             Check the correct input email!
         </div>
+        <div class="registered_container" style="display: none;">
+            <h2 class="registered_title">Thank You!</h2>
+            <p class="registered_text">you registered!</p>
+        </div>
+         <div class="login-link">
+                Have an account?<a href="#">Login</a>
+            </div>
     </div>
 
     <script src="/Script/Vendor/script-svg.js"></script>

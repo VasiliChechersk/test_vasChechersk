@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 
-h2 {
+.form_title {
     /* New user? */
     position: absolute;
     height: 26px;
@@ -22,7 +22,7 @@ h2 {
     color: #111111;
 }
 
-p {
+.form_text {
     /* Use the form below t */
     position: absolute;
     top: 26px;
@@ -82,6 +82,7 @@ p {
 
 .label_user {
     position: absolute;
+    margin: 0;
     height: 14px;
     left: 0.38%;
     top: calc(50% - 14px/2 - 13.7px);
